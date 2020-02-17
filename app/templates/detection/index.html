@@ -1,0 +1,18 @@
+{% extends "base/index.html" %}
+
+{% block title %}Detection{% endblock %}
+
+{% block app_content %}
+    <h1>Verify news!</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.content.label }}<br>
+            {{ form.content }}
+        </p>
+        {% for error in form.content.errors %}
+            <span class="badge progress-bar-danger">{{ error }}</span>
+        {% endfor %}
+        <p style="margin-top: 10px">{{ form.submit() }}</p>
+    </form>
+{% endblock %}
