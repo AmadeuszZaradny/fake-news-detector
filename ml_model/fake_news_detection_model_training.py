@@ -16,6 +16,7 @@ labels = list(map(lambda label: 1 if label == 'REAL' else 0, data['label']))
 vectorizing_start = timer()
 vectorizer = TfidfVectorizer(
     analyzer='word',
+    ngram_range=(1, 3),
     tokenizer=stemming_tokenizer,
     max_features=FAKE_NEWS_DETECTION_FEATURES_COUNT)
 reduced_contents_vector = vectorizer.fit_transform(contents)
