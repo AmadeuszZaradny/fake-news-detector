@@ -4,7 +4,7 @@ import sys
 
 class FakeNewsDetector:
     def __init__(self):
-        sys.path.append('/Users/amadeusz.zaradny/machine-learining/fake-news-detector/fake-news-service/ml_model')
+        sys.path.append('ml_model')
         self.classifier = pickle.load(open("ml_model/fake-news-detection-model.pickle", "rb"))
         self.vectorizer = pickle.load(open("ml_model/fake-news-vectorizer.pickle", "rb"))
 

@@ -1,5 +1,17 @@
 {% extends "base/index.html" %}
 
 {% block app_content %}
-    <h1>Welcome to FakeNewsDetector 🕶</h1>
+    <h1>Welcome to FakeFilter 🕶</h1>
+    <h3>
+        This web service is designed to recognize and detect fake newses. Service is powered by machine learning model SVM using natural language processing engine and training dataset available
+        <a href="https://www.kaggle.com/hassanamin/textdb3">here</a>
+    </h3>
+    <h3>
+        If you have a document you want to be verified, select the
+        <a href="http://localhost:5000/detect/content">Detect Content</a>
+        option in the Navigation Bar
+        If link to article you want to be verified, select the
+        <a href="http://localhost:5000/detect/url">Detect URL</a>
+        option in the Navigation Bar
+    </h3>
 {% endblock %}
